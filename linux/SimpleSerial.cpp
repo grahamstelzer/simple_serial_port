@@ -139,10 +139,10 @@ std::string SimpleSerial::ReadSerialPort(int reply_wait_time, const std::string&
             }
         }
 
-        if (message.find("}") != std::string::npos) {
-            std::cout << "Termination string \"}\" received." << std::endl;
-            break;
-        }
+        // if (message.find("}") != std::string::npos) {
+        //     std::cout << "Termination string \"}\" received." << std::endl;
+        //     break;
+        // }
 
         // check for timeout
         if (std::chrono::steady_clock::now() - start > timeout) {
